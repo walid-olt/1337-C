@@ -1,7 +1,7 @@
 #!/usr/bin/env fish
 
 if test (count $argv) -eq 0
-    echo "Usage: ./run.fish <directory>"
+    echo "Usage: ./runex.fish <directory>"
     exit 1
 end
 
