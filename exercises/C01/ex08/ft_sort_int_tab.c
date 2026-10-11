@@ -51,6 +51,6 @@ int main(void) {
   int arr[] = {101, 4, 1, 5, 7, 1, 2, 8, 3, 9, 0};
   int size = sizeof(arr) / sizeof(int);
   ft_sort_int_tab(arr, size);
-  assert(arr[0] == 0 && arr[size - 1] == 101);
+  assert(arr[0] == 0 && arr[2] == 1 && arr[size - 1] == 101);
   return 0;
 }
