@@ -17,5 +17,6 @@ int ft_strlen(char *str) {
 
 int main(void) {
   assert(ft_strlen("abc") == 3);
+  assert(sizeof("abc") == 4);
   return 0;
 }
