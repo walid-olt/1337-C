@@ -1,4 +1,6 @@
 #include <assert.h>
+// just read the ../../../norm.pdf and apparently I've broken EVERY rule on
+// the book, but from now on, I'll try to adhere to it 🤞
 #define IS_LOWERCASE_CHAR(c) ((c) >= 'a' && (c) <= 'z')
 
 int ft_str_is_lowercase(char *str) {
