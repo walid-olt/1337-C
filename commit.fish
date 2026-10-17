@@ -6,7 +6,9 @@ if test -n "$last_file"
     set -l file_name (basename "$last_file")
     echo "Running norminette : $file_name"
 
-    if norminette "$last_file"
+    norminette "$last_file"
+
+    if test $status -eq 0
         git add -v "$last_file"
         git commit -m "$file_name"
         git push
