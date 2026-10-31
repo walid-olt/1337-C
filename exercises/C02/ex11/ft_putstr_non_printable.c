@@ -6,7 +6,7 @@
 /*   By: walid <github.com/walid-olt>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+      +#+          */
 /*   Created: 2026/10/26 00:00:00 by walid             #+#    #+#             */
-/*   Updated: 2026/10/26 00:00:00 by walid            ###   ########.fr       */
+/*   Updated: 2026/10/31 00:00:00 by walid            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,9 @@ void	ft_putchar(char c)
 
 void	ft_putstr_non_printable(char *str)
 {
-	unsigned char	x;
+	char	hex_chars[] = "0123456789abcdef";
+	char	high;
+	char	low;
 
 	while (*str)
 	{
@@ -27,10 +29,11 @@ void	ft_putstr_non_printable(char *str)
 			ft_putchar(*str);
 		else
 		{
+			high = hex_chars[(*str >> 4) & 0xF];
+			low = hex_chars[(*str & 0xF)];
 			ft_putchar('\\');
-			x = (unsigned char)*str;
-			ft_putchar("0123456789abcdef"[x / 16]);
-			ft_putchar("0123456789abcdef"[x % 16]);
+			ft_putchar(high);
+			ft_putchar(low);
 		}
 		str++;
 	}
